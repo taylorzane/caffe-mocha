@@ -2,8 +2,7 @@
   "name": "caffe-mocha",
   "version": "0.0.1",
   "description": "Reactive, component-oriented view layer for modern web interfaces.",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/taylorzane/caffe-mocha.git"
