@@ -11,7 +11,7 @@
     "mocha"
   ],
   "author": "Taylor Zane Glaeser",
-  "license": "BSD-2",
+  "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/taylorzane/caffe-mocha/issues"
   },
