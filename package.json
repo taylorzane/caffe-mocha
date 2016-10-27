@@ -1,0 +1,20 @@
+{
+  "name": "caffe-mocha",
+  "version": "0.0.1",
+  "description": "Reactive, component-oriented view layer for modern web interfaces.",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taylorzane/caffe-mocha.git"
+  },
+  "keywords": [
+    "mocha"
+  ],
+  "author": "Taylor Zane Glaeser",
+  "license": "BSD-2",
+  "bugs": {
+    "url": "https://github.com/taylorzane/caffe-mocha/issues"
+  },
+  "homepage": "https://github.com/taylorzane/caffe-mocha#readme",
+}
