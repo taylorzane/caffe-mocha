@@ -46,7 +46,7 @@ const generateSection = ({ name, section, parentDefaults = {} }) => {
   })
 }
 
-const runTests = tests => {
+const run = tests => {
   const sections = tests.sections
 
   if (sections) {
@@ -60,4 +60,6 @@ const runTests = tests => {
   }
 }
 
-export { runTests }
+export {
+  run
+}
