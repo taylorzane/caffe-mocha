@@ -269,7 +269,7 @@ var generateSection = function generateSection(_ref2) {
   });
 };
 
-var runTests = function runTests(tests) {
+var run = function run(tests) {
   var sections = tests.sections;
 
   if (sections) {
@@ -283,5 +283,9 @@ var runTests = function runTests(tests) {
   }
 };
 
-export { runTests };
+var caffe = {
+  run: run
+};
+
+export default caffe;
 //# sourceMappingURL=caffe-mocha.mjs.map

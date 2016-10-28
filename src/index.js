@@ -60,6 +60,8 @@ const run = tests => {
   }
 }
 
-export {
+const caffe = {
   run
 }
+
+export default caffe

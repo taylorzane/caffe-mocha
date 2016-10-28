@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('lodash'), require('chai')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'lodash', 'chai'], factory) :
-  (factory((global.caffeMocha = global.caffeMocha || {}),global._,global.chai));
-}(this, (function (exports,_,chai) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('lodash'), require('chai')) :
+  typeof define === 'function' && define.amd ? define(['lodash', 'chai'], factory) :
+  (global.caffeMocha = factory(global._,global.chai));
+}(this, (function (_,chai) { 'use strict';
 
 _ = 'default' in _ ? _['default'] : _;
 chai = 'default' in chai ? chai['default'] : chai;
@@ -275,7 +275,7 @@ var generateSection = function generateSection(_ref2) {
   });
 };
 
-var runTests = function runTests(tests) {
+var run = function run(tests) {
   var sections = tests.sections;
 
   if (sections) {
@@ -289,9 +289,11 @@ var runTests = function runTests(tests) {
   }
 };
 
-exports.runTests = runTests;
+var caffe = {
+  run: run
+};
 
-Object.defineProperty(exports, '__esModule', { value: true });
+return caffe;
 
 })));
 //# sourceMappingURL=caffe-mocha.js.map
