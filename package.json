@@ -1,7 +1,7 @@
 {
   "name": "caffe-mocha",
-  "version": "0.1.4",
-  "description": "Reactive, component-oriented view layer for modern web interfaces.",
+  "version": "0.1.5",
+  "description": "A semi-opinionated wrapper for the mocha test suite.",
   "main": "dist/caffe-mocha.js",
   "jsnext:main": "dist/caffe-mocha.mjs",
   "scripts": {
