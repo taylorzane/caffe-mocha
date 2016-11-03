@@ -110,7 +110,7 @@ const testCases = {
     expectation: Any,
     method: Function,
     args: Array<Any>,
-    comparison: Function,
+    comparison: Function || String,
     skip: Boolean
   },
   sections: {
@@ -119,7 +119,7 @@ const testCases = {
         expectation: Any,
         method: Function,
         args: Array<Any>,
-        comparison: Function,
+        comparison: Function || String,
         skip: Boolean
       },
       sections: {
@@ -128,7 +128,7 @@ const testCases = {
             expectation: Any,
             method: Function,
             args: Array<Any>,
-            comparison: Function,
+            comparison: Function || String,
             skip: Boolean
           },
           sections: { /* ad infinum */ },
@@ -137,7 +137,7 @@ const testCases = {
               expectation: Any,
               method: Function,
               args: Array<Any>,
-              comparison: Function,
+              comparison: Function || String,
               skip: Boolean
             }
           }
@@ -148,7 +148,7 @@ const testCases = {
           expectation: Any,
           method: Function,
           args: Array<Any>,
-          comparison: Function,
+          comparison: Function || String,
           skip: Boolean
         }
       }
@@ -167,7 +167,7 @@ The following properties are available:
     - `expectation`: The value that the output of `method` will be compared against.
     - `method`: The function/method that will accept `args`, and return a value to compare against `expectation`.
     - `args`: An array of arguments to be passed to `method`.
-    - `comparison`: The function/method that will compare the output of `method` and `expectation`.
+    - `comparison`: The function/method that will compare the output of `method` and `expectation`. This can also be a string to easily do `==` or `>=` (etc) checks.
     - `skip`: A boolean that determines whether a section/case should be skipped (this will still output the test case name like `describe.skip` or `it.skip` does.)
   - A `defaults` object may exist at the root level.
   - A `defaults` object may only exist at any level that `sections` or `cases` exists.
@@ -219,7 +219,7 @@ The following properties are available:
     - `expectation`: The value that the output of `method` will be compared against.
     - `method`: The function/method that will accept `args`, and return a value to compare against `expectation`.
     - `args`: An array of arguments to be passed to `method`.
-    - `comparison`: The function/method that will compare the output of `method` and `expectation`.
+    - `comparison`: The function/method that will compare the output of `method` and `expectation`. This can also be a string to easily do `==` or `>=` (etc) checks.
     - `skip`: A boolean that determines whether a case should be skipped (this will still output the test case name like `it.skip` does.)
   - A case object must not exist at the root level.
   - A case object may only exist in a `cases` object. Any other location will cause the case to be discarded.

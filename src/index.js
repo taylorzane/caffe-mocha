@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import chai from 'chai'
+import safeEval from 'safe-eval'
 const expect = chai.expect
 
 const generateCase = ({ name, kase, defaults }) => {
@@ -14,7 +15,15 @@ const generateCase = ({ name, kase, defaults }) => {
 
     const value = method(...args)
 
-    expect(comparison(value, expectation)).to.be.true
+    switch (true) {
+      case _.isString(comparison):
+        expect(safeEval(`${value} ${comparison} ${expectation}`)).to.be.true
+        break
+      case _.isFunction(comparison):
+        expect(comparison(value, expectation)).to.be.true
+        break
+      default: break
+    }
   })
 }
 
