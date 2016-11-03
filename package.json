@@ -1,6 +1,6 @@
 {
   "name": "caffe-mocha",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A semi-opinionated wrapper for the mocha test suite.",
   "main": "dist/caffe-mocha.js",
   "jsnext:main": "dist/caffe-mocha.mjs",
